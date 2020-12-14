@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sneha.blindpeople">
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BlindPeople">
+        <activity android:name=".Activity.GeolocationActivity" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.TextToSpeechActivity" />
+        <activity android:name=".Activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="4pWnhlgA6wusdXQdAwqd" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="JaIP9YCzSIbh0NnFWP7PTA" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="dXAWhiBWgSHNapyJwDitYtQ/O/hMl1Al/hUmRkBUsXQ5V3JXT4PWzTwdkde8yjnvgTcM3mphLsi6yDDTXX2v+7lHox5khMwoMpFWcU53ZROjYmfDwERRERQXjQo0lPTnMdOkuI9v3TolevtFN9qYBZP+JatD1JL5r6r5OjlQ9M8x8/btXnzdc9KGWnBy9Kv0SmZY54KVhqK1tjtK/t3Qkjp6TL6j0l9mI8kh9lIeDcV3xFKLBeIuB8tgSFxg/zAfhxNCeZ+2+QzVykvl+9hWFqysNK5IjI76ZTMHhD38JkcQ5j4/+6PmECxYaeK29n0s18j+Ld/OkExKMs2V2b8Xs/M+CYLgAIyEdBO+I3cGOgVWeEZimNwL/287XWP+mlBFhCQxo/g8w8U2lFHV4P1o5PsWPPV9rbwmS0kYwxg9M004qEUZ5MHet+qkANRUnPIUfI9Xw+thE+m2kQyykinF0QqKv6aZ/8MIdsrA4UnLOVY/8t2sVijZnVENcgbrK37PZpGZWYeVCKTeHpo8nveJLO6SNzGzLyw4uo3k2GF9zMXBib26UTb29S4lq0QceVRukEeRXGMvho399AWtxS2n268BaQ1yyP2S2egQ9D4tkChs0TzKaEkGT9X1L6EKHAIvZEXU13ybphHHsVtiWQnpv1h+Z0bieGS7kMZIpXLFFk0=" />
+
+        <service
+            android:name="com.here.android.mpa.service.MapService"
+            android:exported="false"
+            android:label="demoService">
+            <intent-filter>
+                <action android:name="mapService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
